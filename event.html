@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <title>AI Career Day</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172746;
+      --muted: #61708a;
+      --purple: #6745d5;
+      --pink: #ed6a9b;
+      --paper: #ffffff;
+      --line: #e8e9f3;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 48px 20px;
+      display: grid;
+      place-items: center;
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse at 12% 10%, rgba(237, 106, 155, .17), transparent 34%),
+        radial-gradient(ellipse at 90% 88%, rgba(103, 69, 213, .15), transparent 36%),
+        #f7f7fc;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    main {
+      width: min(100%, 760px);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: var(--paper);
+      box-shadow: 0 28px 80px rgba(44, 39, 89, .13);
+    }
+
+    .hero {
+      position: relative;
+      padding: 48px 52px 42px;
+      overflow: hidden;
+      color: white;
+      background: linear-gradient(120deg, #6242cc, #8556df 58%, #bd61c3);
+    }
+
+    .hero::after {
+      position: absolute;
+      right: -54px;
+      bottom: -125px;
+      width: 290px;
+      height: 290px;
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 50%;
+      box-shadow: 0 0 0 28px rgba(255,255,255,.07), 0 0 0 58px rgba(255,255,255,.05);
+      content: "";
+    }
+
+
+    .top-nav {
+      position: absolute;
+      top: 18px;
+      right: 20px;
+      z-index: 2;
+    }
+
+    .top-nav a {
+      display: inline-block;
+      padding: 9px 15px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper);
+      color: var(--accent, var(--purple));
+      font-size: .9rem;
+      font-weight: 650;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(36, 50, 71, .08);
+    }
+
+    .top-nav a:hover { transform: translateY(-1px); }
+    .audience {
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+      margin: 0 0 22px;
+      padding: 8px 13px;
+      border: 1px solid rgba(255,255,255,.35);
+      border-radius: 999px;
+      background: rgba(255,255,255,.13);
+      font-size: .9rem;
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      max-width: 520px;
+      font-size: clamp(2.8rem, 8vw, 5rem);
+      line-height: .98;
+      letter-spacing: -.055em;
+    }
+
+    .highlights {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      padding: 24px 28px;
+      background: #fcfaff;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .highlight {
+      padding: 20px 22px;
+      border: 1px solid #ece6fb;
+      border-radius: 18px;
+      background: white;
+    }
+
+    .highlight.deadline {
+      border-color: #f8dce8;
+      background: #fff7fa;
+    }
+
+    .label {
+      display: block;
+      margin-bottom: 9px;
+      color: var(--muted);
+      font-size: .76rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .value {
+      display: block;
+      color: var(--purple);
+      font-size: clamp(1.45rem, 4vw, 2rem);
+      font-weight: 750;
+      letter-spacing: -.035em;
+    }
+
+    .deadline .value { color: #d14f80; }
+
+    .facts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 28px;
+      padding: 10px 52px 34px;
+    }
+
+    .fact {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 19px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .fact dt { color: var(--muted); }
+    .fact dd { margin: 0; text-align: right; font-weight: 650; }
+
+    @media (max-width: 560px) {
+      body { padding: 22px 13px; }
+      .hero { padding: 36px 27px 34px; }
+      .highlights { padding: 17px; gap: 11px; }
+      .highlight { padding: 16px 14px; }
+      .facts { grid-template-columns: 1fr; padding: 4px 27px 28px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="hero">
+      <nav class="top-nav" aria-label="Điều hướng"><a href="index.html">Giới thiệu về tôi</a></nav>
+      <p class="audience">Sinh viên đại học</p>
+      <h1>AI Career Day</h1>
+    </header>
+
+    <section class="highlights" aria-label="Ngày giờ và hạn đăng ký">
+      <div class="highlight">
+        <span class="label">Ngày</span>
+        <strong class="value">15 tháng 11</strong>
+      </div>
+      <div class="highlight">
+        <span class="label">Thời gian</span>
+        <strong class="value">14:00–16:00</strong>
+      </div>
+      <div class="highlight deadline">
+        <span class="label">Hạn đăng ký</span>
+        <strong class="value">10 tháng 11</strong>
+      </div>
+    </section>
+
+    <dl class="facts">
+      <div class="fact">
+        <dt>Địa điểm</dt>
+        <dd>Phòng hội thảo A</dd>
+      </div>
+      <div class="fact">
+        <dt>Chi phí</dt>
+        <dd>Miễn phí</dd>
+      </div>
+    </dl>
+  </main>
+</body>
+</html>
+
+
